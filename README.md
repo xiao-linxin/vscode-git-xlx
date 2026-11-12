@@ -9,8 +9,12 @@
 
 | 渠道 | 方式 |
 | --- | --- |
-| VSIX | 扩展面板右上角 `…` → **从 VSIX 安装**，选 `git-xlx-<版本>.vsix`；或命令行 `code --install-extension git-xlx-<版本>.vsix` |
-| 扩展市场 | 暂未上架 |
+| VS Code 官方市场 | 扩展面板搜 `Git XLX` 或 `xiaolinxin.git-xlx` · <https://marketplace.visualstudio.com/items?itemName=xiaolinxin.git-xlx> |
+| Open VSX（CodeBuddy / VSCodium 等） | 扩展面板搜 `git-xlx` · <https://open-vsx.org/extension/xiaolinxin/git-xlx> |
+| VSIX | 扩展面板右上角 `…` → **从 VSIX 安装**，选 `git-xlx-<版本>.vsix`；或 `code --install-extension git-xlx-<版本>.vsix` |
+
+> CodeBuddy 的插件商城就是 Open VSX（客户端 `product.json` 的 `extensionsGallery` 指向
+> `open-vsx.org`），在 CodeBuddy 里搜 `git-xlx` 即可。
 
 装完在【源代码管理】里会出现「仓库集」一栏；若没出现，重载一次窗口。
 
@@ -81,6 +85,8 @@
 
 - 源码仓库：<https://github.com/xiao-linxin/vscode-git-xlx>
 - 问题反馈：<https://github.com/xiao-linxin/vscode-git-xlx/issues>
+- VS Code 官方市场：<https://marketplace.visualstudio.com/items?itemName=xiaolinxin.git-xlx>
+- Open VSX：<https://open-vsx.org/extension/xiaolinxin/git-xlx>
 
 ## License
 

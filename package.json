@@ -1,8 +1,8 @@
 {
   "name": "git-xlx",
   "displayName": "Git XLX",
-  "description": "Git 工具集：仓库集（按需只保留日常要看的仓库）、日常集切换等",
-  "version": "0.2.3",
+  "description": "Git 工具集：仓库集——在【源代码管理】自建一栏，勾选即打开仓库、取消即关闭，只保留日常要看的那几个",
+  "version": "0.2.4",
   "publisher": "xiaolinxin",
   "icon": "icon.png",
   "license": "MIT",

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.4
+
+- 市场文案修正：`description` 不再提"日常集切换"（实际是仓库集/集合切换）
+- 本版**尚未发布**：待新令牌生成后执行 `./publish.sh` 同步两个市场
+
 ## 0.2.3
 
 - 移除遗留的 `enabledApiProposals`（`contribSourceControlTitleMenu`）：当前实现已不再贡献

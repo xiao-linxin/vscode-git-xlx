@@ -1,9 +1,18 @@
 # Changelog
 
-## 0.2.4
+## 1.0.0
 
-- 市场文案修正：`description` 不再提"日常集切换"（实际是仓库集/集合切换）
-- 本版**尚未发布**：待新令牌生成后执行 `./publish.sh` 同步两个市场
+首个正式版：**仓库集**栏。
+
+- 自建「仓库集」栏：勾选 = `git.openRepository`，取消 = `git.close`，
+  【更改】里只保留勾选的仓库；未勾的仓库在本栏仍列出并标「已关闭」
+- 保存 / 套用集合，`activeSet` 落盘 `<窗口根>/.vscode/git-xlx.json`
+- 启动静默对齐（`alignDelay`，默认 5 秒），`newRepoPolicy` 决定新仓库保持还是关闭
+- 标题栏：保存当前为集合 / 全部取消选中 / 套用集合；分组右键：选中、取消该节点全部
+- 状态栏入口：`已打开/总数 · 集合名`，点击弹菜单
+- 5 项配置：`configPath` / `restoreOnStartup` / `alignDelay` / `newRepoPolicy` / `confirmBeforeClose`
+- 市场文案与 README 更新：安装三渠道（官方市场 / Open VSX / VSIX），说明 CodeBuddy 商城即 Open VSX
+- 包内清理：不含本机装配脚本；移除遗留的 `enabledApiProposals`
 
 ## 0.2.3
 

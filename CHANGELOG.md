@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3
+
+- 移除遗留的 `enabledApiProposals`（`contribSourceControlTitleMenu`）：当前实现已不再贡献
+  `scm/repositories/title`，该声明会让 VS Code 官方市场拒绝发布
+- 版本号递增，用于市场重新发布
+
 ## 0.2.2
 
 - 发布准备：补充 `icon`、`license`、`keywords` 与 CHANGELOG

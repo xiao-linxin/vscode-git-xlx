@@ -2,7 +2,7 @@
   "name": "git-xlx",
   "displayName": "Git XLX",
   "description": "Git 工具集：仓库集（按需只保留日常要看的仓库）、日常集切换等",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publisher": "xiaolinxin",
   "icon": "icon.png",
   "license": "MIT",
@@ -213,9 +213,6 @@
     },
     "viewsWelcome": []
   },
-  "enabledApiProposals": [
-    "contribSourceControlTitleMenu"
-  ],
   "extensionKind": [
     "workspace"
   ],

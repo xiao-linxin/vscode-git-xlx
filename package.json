@@ -2,25 +2,37 @@
   "name": "git-xlx",
   "displayName": "Git XLX",
   "description": "Git 工具集：仓库集（按需只保留日常要看的仓库）、日常集切换等",
-  "version": "0.2.1",
-  "enabledApiProposals": [
-    "contribSourceControlTitleMenu"
-  ],
+  "version": "0.2.2",
   "publisher": "xiaolinxin",
+  "icon": "icon.png",
   "license": "MIT",
-  "engines": {
-    "vscode": "^1.85.0"
-  },
   "categories": [
     "Other"
   ],
-  "extensionKind": [
-    "workspace"
+  "keywords": [
+    "git",
+    "scm",
+    "repositories",
+    "repo sets",
+    "source control",
+    "workspace",
+    "仓库集"
   ],
-  "main": "./out/extension.js",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
   "activationEvents": [
     "onStartupFinished"
   ],
+  "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiao-linxin/vscode-git-xlx"
+  },
+  "bugs": {
+    "url": "https://github.com/xiao-linxin/vscode-git-xlx/issues"
+  },
+  "homepage": "https://github.com/xiao-linxin/vscode-git-xlx#readme",
   "contributes": {
     "commands": [
       {
@@ -201,6 +213,12 @@
     },
     "viewsWelcome": []
   },
+  "enabledApiProposals": [
+    "contribSourceControlTitleMenu"
+  ],
+  "extensionKind": [
+    "workspace"
+  ],
   "scripts": {
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
@@ -210,13 +228,5 @@
     "@types/node": "^20.11.0",
     "@types/vscode": "^1.85.0",
     "typescript": "^5.4.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xiao-linxin/vscode-git-xlx"
-  },
-  "bugs": {
-    "url": "https://github.com/xiao-linxin/vscode-git-xlx/issues"
-  },
-  "homepage": "https://github.com/xiao-linxin/vscode-git-xlx#readme"
+  }
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1
+
+- 分组规则：组名去掉 `.worktrees` / `-worktrees` / `.wt` 后缀后再归类，
+  `go_service` 与 `go_service.worktrees/*` 合并到同一个组
+- 子项标签改为相对组的上一级目录，合并后仍能看出仓库来源
+  （例如 `go_service.worktrees/260928_haluo`）
+
 ## 1.0.0
 
 首个正式版：**仓库集**栏。

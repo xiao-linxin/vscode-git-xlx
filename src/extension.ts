@@ -271,16 +271,29 @@ function scanWorkspace(): string[] {
 
 /* ------------------------------------------------------------------ 视图 */
 
+/** 组名后缀归一：go_service.worktrees / go_service.wt / go_service-worktrees → go_service */
+const GROUP_SUFFIXES = ['.worktrees', '-worktrees', '.wt'];
+
 function groupOf(p: string): { key: string; label: string } {
   const parts = p.split(path.sep).filter(Boolean);
-  if (parts[0] === 'www' && parts.length >= 3) {
-    return { key: `/${parts.slice(0, 3).join('/')}`, label: parts[2] };
+  let baseDir: string;
+  let raw: string;
+  if ((parts[0] === 'www' || parts[0] === 'home') && parts.length >= 3) {
+    baseDir = `/${parts[0]}/${parts[1]}`;
+    raw = parts[2];
+  } else {
+    baseDir = path.dirname(path.dirname(p));
+    raw = path.basename(path.dirname(p));
   }
-  if (parts[0] === 'home' && parts.length >= 3) {
-    return { key: `/${parts.slice(0, 3).join('/')}`, label: parts[2] };
+  let name = raw;
+  const lower = raw.toLowerCase();
+  for (const sfx of GROUP_SUFFIXES) {
+    if (lower.endsWith(sfx) && raw.length > sfx.length) {
+      name = raw.slice(0, raw.length - sfx.length);
+      break;
+    }
   }
-  const parent = path.dirname(p);
-  return { key: parent, label: path.basename(parent) };
+  return { key: path.join(baseDir, name), label: name };
 }
 
 class RepoItem extends vscode.TreeItem {
@@ -330,7 +343,7 @@ class RepoProvider implements vscode.TreeDataProvider<vscode.TreeItem> {
       const g = groupOf(p);
       const repo = openMap.get(norm(p));
       const branch = repo?.state?.HEAD?.name ?? '';
-      const label = path.relative(g.key, p) || path.basename(p);
+      const label = path.relative(path.dirname(g.key), p) || path.basename(p);
       const item = new RepoItem(p, !!repo, branch, label);
       const bucket = buckets.get(g.key) ?? { label: g.label, items: [] };
       bucket.items.push(item);
